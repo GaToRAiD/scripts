@@ -68,7 +68,7 @@ def update_JSS(new_pass):
         	</attribute>
     	</extension_attributes>
 	</computer>''' % new_pass
-	request = urllib2.Request('https://chscasper.benefitfocus.com:8443/JSSResource/computers/id/' + computer_id)
+	request = urllib2.Request('https://jss.company.com:8443/JSSResource/computers/id/' + computer_id)
 	request.add_header('Authorization', 'Basic ' + base64.b64encode(UserName + ':' + PassWord))
 	request.add_header('Content-Type', 'text/xml')
 	request.get_method = lambda: 'PUT'
